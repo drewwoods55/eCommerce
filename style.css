@@ -1,0 +1,272 @@
+:root {
+  --background: #525252;
+}
+*{
+  margin: 0;
+  
+}
+.navBar {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  top: 0;
+  border-bottom: 3px solid #ec625f;
+}
+
+.logo {
+  color: white;
+}
+
+.navToggle {
+  display: none;
+}
+
+.navToggleLabel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navToggleLabel span,
+.navToggleLabel span::before,
+.navToggleLabel span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.navToggleLabel span::before,
+.navToggleLabel span::after {
+  content: "";
+  position: absolute;
+}
+
+.navToggleLabel span::before {
+  bottom: 7px;
+}
+
+.navToggleLabel span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 0;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #ec625f;
+}
+
+.navToggle:checked ~ nav {
+  transform: scale(1, 1);
+}
+
+.navToggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+} 
+/* slideshow*/
+.slideshow {  height:300px; overflow:hidden; position:relative; }
+
+
+.slideshow img{ position:absolute; animation:slideshow 20s infinite; opacity:0;   }
+
+@keyframes slideshow {25%{opacity:1;} 40%{opacity:0;}}
+.slideshow img:nth-child(4){animation-delay:0s;}
+.slideshow img:nth-child(3){animation-delay:5s;}
+.slideshow img:nth-child(2){animation-delay:10s;}
+.slideshow img:nth-child(1){animation-delay:15s;}
+/* products */
+.product-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  grid-gap: 2rem;
+  background-color: #525252;
+}
+.product >img {
+  height: 160px;
+  width: 140px;
+}
+.product{
+  padding: 5em;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+}
+/* contact page */
+#contact {
+  background-color:#c7c7c7;
+  width:50%;
+  margin: auto;
+  
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  background-color:#525252;
+}
+
+#contact input[type="text"],
+select,
+textarea {
+  width: 100%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical; 
+  
+}
+
+/* Style the submit button with a specific background color etc */
+#contact input[type="submit"] {
+  background-color: #eeeee0;
+  color: ad9f93;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+}
+
+/* Add a background color and some padding around the form */
+#contact .container {
+  border-radius: 5px;
+  background-color: #ec625f;
+  padding: 20px;
+  margin: 20px;
+}
+/* footer */
+.social {
+  margin: top 40px;
+  color: white;
+}
+.social .i {
+  color: white;
+  font-size: 60px;
+  padding: 0px 10px;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: #525252;
+  padding: 0.5rem;
+  top: 0;
+  border-top: 3px solid #ec625f;
+  padding: 0.5rem;
+  font-size: 0.5rem;
+}
+
+footer p {
+  margin: 10px;
+  color: white;
+}
+.social-media {
+  padding: 5px 0;
+}
+.social-media a {
+  color: white;
+  font-size: 30px;
+}
+
+
+@media screen and (min-width: 1300px) {
+  .navToggleLabel {
+    display: flex;
+  }
+
+  .navToggleLabel span,
+  .navToggleLabel span::before,
+  .navToggleLabel span::after {
+    display: none;
+  }
+  .navBar {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: "";
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    bottom: -0.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transform-origin: left;
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+}
