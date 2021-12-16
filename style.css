@@ -219,7 +219,7 @@ textarea {
 /* Style the submit button with a specific background color etc */
 #contact input[type="submit"] {
   background-color: #eeeee0;
-  color: ad9f93;
+  color: #ad9f93;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -238,7 +238,7 @@ textarea {
 
 /* footer */
 .social {
-  margin: top 40px;
+  margin-top: 40px;
   color: white;
   font-size: 20px;
 }
@@ -277,7 +277,6 @@ footer p {
     font-size: 20px;
     padding: 10px;
     line-height: 30px;
-
   }
   .navToggleLabel {
     display: flex;
@@ -290,7 +289,7 @@ footer p {
   }
   .navBar {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    grid-template-columns: 1fr auto minmax(600px, 3fr)  1fr;
   }
 
   .logo {
@@ -363,7 +362,7 @@ footer p {
 .button {
   border-radius: 10px;
   color: #000;
-  
+  display: block;
   font-size: 1.5rem;
   padding: 3px 3px;
   text-align: center;
