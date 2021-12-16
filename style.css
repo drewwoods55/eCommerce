@@ -277,7 +277,6 @@ footer p {
     font-size: 20px;
     padding: 10px;
     line-height: 30px;
-
   }
   .navToggleLabel {
     display: flex;
@@ -290,7 +289,7 @@ footer p {
   }
   .navBar {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+    grid-template-columns: 1fr auto minmax(600px, 3fr)  1fr;
   }
 
   .logo {
