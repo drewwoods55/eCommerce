@@ -114,7 +114,7 @@ nav a:hover {
 
 .row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -123,6 +123,11 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   flex: 1;
+  width: 100%;
+}
+.column p{
+  font-size: 20px;
+  line-height: 30px;
 }
 
 
@@ -234,7 +239,9 @@ textarea {
 }
 
 /* buttons */
-
+h1{
+  text-align: center;
+}
 
 /* footer */
 .social {
@@ -273,11 +280,14 @@ footer p {
 
 
 @media screen and (min-width: 1300px) {
+  .row {
+    flex-direction: row;
+  }
   .column p {
     font-size: 20px;
     padding: 10px;
     line-height: 30px;
-  }
+    }
   .navToggleLabel {
     display: flex;
   }
@@ -289,7 +299,7 @@ footer p {
   }
   .navBar {
     display: grid;
-    grid-template-columns: 1fr auto minmax(600px, 3fr)  1fr;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
   }
 
   .logo {
@@ -351,26 +361,28 @@ footer p {
   margin: 10px 0;
   padding: 2%;
 }
-
-.third-container h3 {
-  font-size: 1.5rem;
-}
-
-.third-container:last-child {
-  border: none;
+.margin-normal{
+  margin: 0px 10px;
 }
 .button {
+  
+  
   border-radius: 10px;
-  color: #000;
+  color: black;
   display: block;
   font-size: 1.5rem;
-  padding: 3px 3px;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
   background-color: whitesmoke;
-  margin-bottom: 15px;
+  width: auto;
+  margin: 0px auto 25px auto;
+  
 }
+
+
+
 .button:hover {
-  background-color: #ec625f; /* Green */
+  background-color: #ec625f;
   color: white;
 }
