@@ -64,7 +64,7 @@ body {
 }
 
 nav {
-  background:transparent;
+  
   position: absolute;
   text-align: left;
   top: 0;
@@ -232,6 +232,10 @@ textarea {
   padding: 20px;
   margin: 20px;
 }
+
+/* buttons */
+
+
 /* footer */
 .social {
   margin: top 40px;
@@ -355,4 +359,19 @@ footer p {
 
 .third-container:last-child {
   border: none;
+}
+.button {
+  border-radius: 10px;
+  color: #000;
+  
+  font-size: 1.5rem;
+  padding: 3px 3px;
+  text-align: center;
+  text-decoration: none;
+  background-color: whitesmoke;
+  margin-bottom: 15px;
+}
+.button:hover {
+  background-color: #ec625f; /* Green */
+  color: white;
 }
